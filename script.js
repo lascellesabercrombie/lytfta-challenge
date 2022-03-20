@@ -28,14 +28,18 @@ const videos = [
     },
 ]
 
+let counter = 0;
+
 function createGalleryVideo(video) {
     console.log('x');
-    const {title, image, duration, source} = video;
+
+    const {title, image, duration} = video;
 
     const template = document.querySelector("#galleryVideoTemplate");
 
     const domFragment = template.content.cloneNode(true);
-
+    domFragment.querySelector("div").id = `gallery-video-${counter}`;
+    domFragment.querySelector("div").addEventListener('click', selectVideo);
     domFragment.querySelector("h3").textContent = title;
     if (image.length == 0) {
     domFragment.querySelector("img").src = `https://yt3.ggpht.com/ytc/AKedOLR97_0kXyqk68f4TkZWd0OoS6zLNdbOmWpzqJlH=s176-c-k-c0x00ffffff-no-rj-mo`;
@@ -44,7 +48,9 @@ function createGalleryVideo(video) {
     domFragment.querySelector("img").src = image;
     }
     domFragment.querySelector("p").textContent = `${duration} seconds`;
-    galleryVideoArea.append(domFragment);
+    
+    galleryVideoArea.appendChild(domFragment);
+    counter ++;    
 }
 
 videos.forEach(createGalleryVideo);
