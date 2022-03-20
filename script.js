@@ -6,7 +6,7 @@ const videos = [
         title: `What is Lyfta?`,
         image: "",
         duration: 141,
-        source: `https://www.youtube.com/watch?v=9Z4zCtv3IEw&ab_channel=Lyfta`,
+        source: `https://www.youtube.com/embed/9Z4zCtv3IEw`,
     },
     {
         title: `Short interview with Lyfta's Co-CEO Serdar Ferit`,
@@ -43,8 +43,25 @@ function createGalleryVideo(video) {
     else {
     domFragment.querySelector("img").src = image;
     }
-   
+    domFragment.querySelector("p").textContent = `${duration} seconds`;
     galleryVideoArea.append(domFragment);
 }
 
 videos.forEach(createGalleryVideo);
+
+function createMainVideo(video) {
+    console.log('y');
+    const {title, source} = video;
+
+    const template = document.querySelector("#mainVideoTemplate");
+    const domFragment = template.content.cloneNode(true);
+
+    domFragment.querySelector("h2").textContent = title;
+    console.log(domFragment.querySelector("iframe"));
+    domFragment.querySelector("iframe").src = source;
+
+    mainVideoArea.append(domFragment);
+}
+
+
+createMainVideo(videos[0]);
