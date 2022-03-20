@@ -66,24 +66,14 @@ function createMainVideo(video) {
 }
 
 function selectVideo(e) {
-    console.log('a');
-    console.log(e.target.parentNode.id);
-    let targetId = e.target.parentNode.id;
-    let targetNumber = targetId.match(/\d/)[0];
-    console.log(targetNumber);
+    const currentVideo = mainVideoArea.querySelectorAll("div");
+
+    if (currentVideo.length > 0) {
+        currentVideo.forEach(video => video.textContent = "");
+    }
+    const targetId = e.target.parentNode.id;
+    const targetNumber = targetId.match(/\d/)[0];
     createMainVideo(videos[targetNumber]);
-    // console.log(mainVideoArea.querySelector("div"))
-    // console.log(mainVideoArea.childNodes);
-    // const currentVideo = mainVideoArea.querySelector("div");
-    // if (currentVideo.innerHTML !== "") {
-    //     console.log('z');
-    //     currentVideo.innerHTML = "";
-    // }
-    // console.log('here');
-    
-    // console.log('there');
-    // galleryVideo.removeChild(video);
 } 
-console.log(document.querySelector("#galleryVideoArea > div:nth-child(2)"))
-document.querySelector("#galleryVideoArea > div:nth-child(2)").addEventListener('click', selectVideo)
-// createMainVideo(videos[0]);
+
+createMainVideo(videos[0]);
