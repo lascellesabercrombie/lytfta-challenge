@@ -72,8 +72,8 @@ function selectVideo(e) {
     if (currentVideo.length > 0) {
         currentVideo.forEach(video => video.textContent = "");
     }
+    const targetId = e.target.closest("section > div").id;
     //use the numbered ID to pick the right video to replace it
-    const targetId = e.target.parentNode.id;
     const targetNumber = targetId.match(/\d/)[0];
     createMainVideo(videos[targetNumber]);
 } 
