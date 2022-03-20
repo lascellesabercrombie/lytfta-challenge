@@ -12,19 +12,19 @@ const videos = [
         title: `Short interview with Lyfta's Co-CEO Serdar Ferit`,
         image: "",
         duration: 204,
-        source: `https://www.youtube.com/watch?v=1EDgKYfzzHI&ab_channel=Lyfta`
+        source: `https://www.youtube.com/embed/1EDgKYfzzHI`,
     },
     {
         title: `Journey to a New Home - Trailer`,
         image: "",
         duration: 61,
-        source: `https://www.youtube.com/watch?v=DNcnmCYeCkk&ab_channel=Lyfta`
+        source: `https://www.youtube.com/embed/DNcnmCYeCkk`,
     },
     {
         title: `Lyfta for children with autism and SEN`,
         image: "",
         duration: 125,
-        source: `https://www.youtube.com/watch?v=YoNvtEpzAoA&ab_channel=Lyfta`
+        source: `https://www.youtube.com/embed/YoNvtEpzAoA`
     },
 ]
 
