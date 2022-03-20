@@ -1,0 +1,57 @@
+:root {
+    --main-background-color: white;
+    --main-text-color: black;
+    --secondary-color: rgb(58, 150, 173);
+    --main-font-family: "Open Sans", Arial, sans-serif; 
+}
+
+* {
+    font-family: var(--main-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+h1, #mainVideoArea {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5rem);
+}
+
+.grid-item {
+    display: inline-grid;
+} */
+
+#galleryVideoArea {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.gallery-video {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+.medium-margin {
+    margin: 1rem;
+}
+
+.medium-padding {
+    padding: 1rem;
+}
