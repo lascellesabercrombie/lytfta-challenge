@@ -58,16 +58,32 @@ videos.forEach(createGalleryVideo);
 function createMainVideo(video) {
     console.log('y');
     const {title, source} = video;
-
     const template = document.querySelector("#mainVideoTemplate");
     const domFragment = template.content.cloneNode(true);
-
     domFragment.querySelector("h2").textContent = title;
-    console.log(domFragment.querySelector("iframe"));
     domFragment.querySelector("iframe").src = source;
-
     mainVideoArea.append(domFragment);
 }
 
-
-createMainVideo(videos[0]);
+function selectVideo(e) {
+    console.log('a');
+    console.log(e.target.parentNode.id);
+    let targetId = e.target.parentNode.id;
+    let targetNumber = targetId.match(/\d/)[0];
+    console.log(targetNumber);
+    createMainVideo(videos[targetNumber]);
+    // console.log(mainVideoArea.querySelector("div"))
+    // console.log(mainVideoArea.childNodes);
+    // const currentVideo = mainVideoArea.querySelector("div");
+    // if (currentVideo.innerHTML !== "") {
+    //     console.log('z');
+    //     currentVideo.innerHTML = "";
+    // }
+    // console.log('here');
+    
+    // console.log('there');
+    // galleryVideo.removeChild(video);
+} 
+console.log(document.querySelector("#galleryVideoArea > div:nth-child(2)"))
+document.querySelector("#galleryVideoArea > div:nth-child(2)").addEventListener('click', selectVideo)
+// createMainVideo(videos[0]);
