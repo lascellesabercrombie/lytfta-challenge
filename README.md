@@ -2,7 +2,7 @@
 
 ## Summary
 
-A basic video player made in HTML, CSS and JS for Lyfta's take-home challenge.
+A basic video player made in HTML, CSS and JS for Lyfta's take-home challenge. The deployment can be viewed [here](https://lascellesabercrombie.github.io/lytfta-challenge/) or on the right.
 
 ## User Stories
 
@@ -22,6 +22,13 @@ A basic video player made in HTML, CSS and JS for Lyfta's take-home challenge.
 ## Project
 
 I realised that HTML5 and iframe brought a good amount of inbuilt control into the videos one could embed into a webpage. With this in mind, I focussed on the first two user stories above: generating a list of videos from an array of objects and then allowing the user to select which to view. Clicking on one of the gallery videos will load it in the top part of the page, with a larger frame and different background to distinguish it. 
+
+## User Journey
+
+- User arrives on page and sees one main video ready to play
+- User scrolls down and sees other videos they can watch
+- User clicks one of these videos, which becomes the main video at the top of the page
+- User watches the chosen video
 
 ## Design
 
