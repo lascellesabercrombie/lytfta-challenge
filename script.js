@@ -28,7 +28,7 @@ const videos = [
     },
 ]
 
-let counter = 0;
+let counter = 0; 
 
 function createGalleryVideo(video) {
     const {title, image, duration} = video;
